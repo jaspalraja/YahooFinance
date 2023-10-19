@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231019 09:28:42.590" rpa="false" schemaversion="4">
+<suite id="s1" name="YahooFinance" source="C:\Python - Selenium\YahooFinance">
+<suite id="s1-s1" name="Tests" source="C:\Python - Selenium\YahooFinance\tests">
+<suite id="s1-s1-s1" name="Test Yahoo Finance" source="C:\Python - Selenium\YahooFinance\tests\test_yahoo_finance.robot">
+<test id="s1-s1-s1-t1" name="Test Create Yahoo Finance Account" line="5">
+<kw name="Create Yahoo Finance Account" library="YahooFinanceKeywords">
+<kw name="Open Yahoo Finance" library="YahooFinancePageObjects">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231019 09:28:43.471" level="INFO">Opening browser 'chrome' to base url 'https://finance.yahoo.com/'.</msg>
+<status status="PASS" starttime="20231019 09:28:43.470" endtime="20231019 09:29:17.781"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231019 09:29:17.781" endtime="20231019 09:29:18.132"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231019 09:29:18.132" endtime="20231019 09:29:18.132"/>
+</kw>
+<status status="PASS" starttime="20231019 09:28:43.469" endtime="20231019 09:29:18.132"/>
+</kw>
+<kw name="Click Sign In" library="YahooFinancePageObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Sign In Link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:18.132" level="INFO">Clicking element 'xpath://span[normalize-space()='Sign in']'.</msg>
+<status status="PASS" starttime="20231019 09:29:18.132" endtime="20231019 09:29:24.551"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Create Account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:24.551" level="INFO">Clicking element 'xpath://a[@id='createacc']'.</msg>
+<status status="PASS" starttime="20231019 09:29:24.551" endtime="20231019 09:29:27.945"/>
+</kw>
+<status status="PASS" starttime="20231019 09:29:18.132" endtime="20231019 09:29:27.945"/>
+</kw>
+<kw name="Fill Registration Form" library="YahooFinancePageObjects">
+<arg>Jaspal</arg>
+<arg>Raja</arg>
+<arg>jaspalraja</arg>
+<arg>SecretP@123</arg>
+<arg>January</arg>
+<arg>10</arg>
+<arg>1992</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${First Name Field}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:27.945" level="INFO">Typing text 'Jaspal' into text field 'xpath://input[@id='usernamereg-firstName']'.</msg>
+<status status="PASS" starttime="20231019 09:29:27.945" endtime="20231019 09:29:31.240"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Last Name Field}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:31.243" level="INFO">Typing text 'Raja' into text field 'xpath://input[@id='usernamereg-lastName']'.</msg>
+<status status="PASS" starttime="20231019 09:29:31.240" endtime="20231019 09:29:34.680"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email Field}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:34.683" level="INFO">Typing text 'jaspalraja' into text field 'xpath://input[@id='usernamereg-userId']'.</msg>
+<status status="PASS" starttime="20231019 09:29:34.680" endtime="20231019 09:29:38.548"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Password Field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:38.548" level="INFO">Typing text 'SecretP@123' into text field 'xpath://input[@id='usernamereg-password']'.</msg>
+<status status="PASS" starttime="20231019 09:29:38.548" endtime="20231019 09:29:41.841"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${DOBMonth}</arg>
+<arg>${Month}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231019 09:29:41.842" level="INFO">Selecting options from selection list 'xpath://select[@id='usernamereg-month']' by label January.</msg>
+<status status="PASS" starttime="20231019 09:29:41.841" endtime="20231019 09:29:50.331"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DOBDay}</arg>
+<arg>${Day}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:50.335" level="INFO">Typing text '10' into text field 'xpath://input[@id='usernamereg-day']'.</msg>
+<status status="PASS" starttime="20231019 09:29:50.332" endtime="20231019 09:29:53.669"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DOBYear}</arg>
+<arg>${Year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:53.671" level="INFO">Typing text '1992' into text field 'xpath://input[@id='usernamereg-year']'.</msg>
+<status status="PASS" starttime="20231019 09:29:53.669" endtime="20231019 09:29:57.119"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Continue Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231019 09:29:57.119" level="INFO">Clicking element 'xpath://button[@id='reg-submit-button']'.</msg>
+<status status="PASS" starttime="20231019 09:29:57.119" endtime="20231019 09:30:01.393"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Recovery Mobile}</arg>
+<arg>08237517239</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231019 09:30:01.393" level="INFO">Typing text '08237517239' into text field 'xpath://input[@id='usernamereg-phone']'.</msg>
+<status status="PASS" starttime="20231019 09:30:01.393" endtime="20231019 09:30:04.767"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Send Code}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231019 09:30:04.767" level="INFO">Clicking element 'Xpath://button[@id='reg-submit-button']'.</msg>
+<status status="PASS" starttime="20231019 09:30:04.767" endtime="20231019 09:30:10.255"/>
+</kw>
+<status status="PASS" starttime="20231019 09:29:27.945" endtime="20231019 09:30:10.256"/>
+</kw>
+<status status="PASS" starttime="20231019 09:28:43.469" endtime="20231019 09:30:10.256"/>
+</kw>
+<status status="PASS" starttime="20231019 09:28:43.468" endtime="20231019 09:30:10.259"/>
+</test>
+<status status="PASS" starttime="20231019 09:28:42.653" endtime="20231019 09:30:10.265"/>
+</suite>
+<status status="PASS" starttime="20231019 09:28:42.649" endtime="20231019 09:30:10.278"/>
+</suite>
+<status status="PASS" starttime="20231019 09:28:42.594" endtime="20231019 09:30:10.282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="YahooFinance">YahooFinance</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">YahooFinance.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Yahoo Finance">YahooFinance.Tests.Test Yahoo Finance</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
